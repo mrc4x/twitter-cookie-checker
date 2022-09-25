@@ -1,0 +1,10 @@
+import requests
+import json
+session = requests.Session()
+jar = requests.cookies.RequestsCookieJar()
+jar.set('NetflixId','v%3D2%26ct%3DBQAOAAEBED9JveBP2FHpXQlQVI7uV-aBwPKNLigD2ZG6ffn9wl4WGuXPeipkY9PMIvqmWnlHCCBq2tqaiDn-QDDspBsyzdOz36fgJP0KDYje83eafLsPnYRmANsvQqka7iFHq7jy5-Q7uq-4wKK6-6oISpSJNbSRpXtlQNo71WkOPjtr6MNGTCMLR08AbCXDmnmmewjIBg60hm8EACego9ELKTUodWukX2fluj36TVpZUaCTAuYYe9-JtzY2q5H5zZ28oagWxRuhLeABsn9CDrjfJgxjKU95pMo8UyszWkSsTZLL8nmn5gZe6uwCVySTmngk2dSsQMdpinNljXcg-WtNCfpvHSfC5BOG_coK4ID9F1QKhnnWBX7-5nspez3P9Jyulj-EQXkZVfDirxmXAz3nBFhY6edq4bbxAcUjtS51cgpwlKAyEbDU9IMUwKZWC5JTDEokuJ2mBkpsCvnDUvgGdy4_ihs6ysuq4-GUGbRHctMXPU4WAfJrFFJ-3UjpnvuV2IYLZX5SrTOpVb9O35j1NiwfNLJQpudD32Fc7CO7d7_ivOjmNkcnK7jeBAN_ketuQT-Ip68M10X1RWQdaPAYa7BGt0TglonYzijih7bbmN6h2x0_uoo.%26bt%3Ddbl%26ch%3DAQEAEAABABQQfg2z47CNNy7aBYpnh2dHcFq74TRoi7Y.%26mac%3DAQEAEAABABRZZFevBdEUomrLkTTOdev6bLBMq7zXfJE.')
+session.cookies = jar
+r = session.get("https://www.netflix.com/YourAccount")
+re = r.text
+
+print(re)
